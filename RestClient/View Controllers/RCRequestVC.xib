@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RCRequestVC">
+            <connections>
+                <outlet property="btnApplicationType" destination="7UU-Lk-Lff" id="4M2-8a-gy3"/>
+                <outlet property="btnMethodType" destination="HDw-HW-gNz" id="2e1-Dj-dxq"/>
+                <outlet property="btnSendRequest" destination="IQX-Va-gcR" id="0yf-6n-Lyu"/>
+                <outlet property="txtBaseUrl" destination="Edi-YS-QvE" id="li9-OH-dT8"/>
+                <outlet property="txtBody" destination="Jnb-mk-zIb" id="wkL-dq-SVv"/>
+                <outlet property="txtParsedResponse" destination="arX-Cv-NqF" id="qmU-3Q-CJF"/>
+                <outlet property="txtRawResponse" destination="UpS-J4-z4p" id="Av6-6H-7j0"/>
+                <outlet property="txtWebServiceName" destination="ymq-AI-hfw" id="Abz-4Z-vKg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://maps.googleapis.com/maps/api" borderStyle="roundedRect" placeholder="Base Url" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Edi-YS-QvE">
+                    <rect key="frame" x="20" y="46" width="280" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="/geocode/json" borderStyle="roundedRect" placeholder="Web Service Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ymq-AI-hfw">
+                    <rect key="frame" x="20" y="84" width="280" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="?address=Av. Alcalde #10 CP 44100 &amp;sensor=false&amp;language=es&amp;components=administrative_area:Jalisco" translatesAutoresizingMaskIntoConstraints="NO" id="Jnb-mk-zIb">
+                    <rect key="frame" x="20" y="189" width="280" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UU-Lk-Lff">
+                    <rect key="frame" x="20" y="122" width="131" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="131" id="1tA-Jo-vFa"/>
+                    </constraints>
+                    <state key="normal" title="Application Type">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDw-HW-gNz">
+                    <rect key="frame" x="169" y="122" width="131" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="131" id="gaE-IK-mtC"/>
+                    </constraints>
+                    <state key="normal" title="Method Type">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQX-Va-gcR">
+                    <rect key="frame" x="20" y="247" width="280" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Send Request">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpS-J4-z4p">
+                    <rect key="frame" x="20" y="323" width="280" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arX-Cv-NqF">
+                    <rect key="frame" x="20" y="410" width="280" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raw response or error :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntv-DU-TWX">
+                    <rect key="frame" x="20" y="294" width="280" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="km6-qX-4wn"/>
+                        <constraint firstAttribute="height" constant="21" id="q0u-YA-c8W"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parsed response :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jl1-bc-EuP">
+                    <rect key="frame" x="20" y="381" width="161" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="161" id="Pcb-UQ-gDx"/>
+                        <constraint firstAttribute="height" constant="21" id="otD-JN-wpJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SQ-8G-OfM">
+                    <rect key="frame" x="20" y="160" width="141" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="141" id="G2X-nU-8W2"/>
+                        <constraint firstAttribute="height" constant="21" id="sLY-Hg-736"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="UpS-J4-z4p" secondAttribute="trailing" constant="20" id="0Dv-Hv-vb2"/>
+                <constraint firstItem="7UU-Lk-Lff" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="15Z-BA-r4w"/>
+                <constraint firstItem="ymq-AI-hfw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="2j3-q0-pdB"/>
+                <constraint firstItem="IQX-Va-gcR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="62O-Mt-jI4"/>
+                <constraint firstItem="6SQ-8G-OfM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="7dF-Nj-5p1"/>
+                <constraint firstAttribute="trailing" secondItem="IQX-Va-gcR" secondAttribute="trailing" constant="20" id="8wB-RZ-diL"/>
+                <constraint firstAttribute="trailing" secondItem="Edi-YS-QvE" secondAttribute="trailing" constant="20" id="AU7-6a-2HZ"/>
+                <constraint firstItem="arX-Cv-NqF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="GdC-0q-RXG"/>
+                <constraint firstItem="6SQ-8G-OfM" firstAttribute="top" secondItem="HDw-HW-gNz" secondAttribute="bottom" constant="8" id="HSx-wS-b4P"/>
+                <constraint firstAttribute="trailing" secondItem="ymq-AI-hfw" secondAttribute="trailing" constant="20" id="I7t-bF-76n"/>
+                <constraint firstItem="Jl1-bc-EuP" firstAttribute="top" secondItem="IQX-Va-gcR" secondAttribute="bottom" constant="104" id="MzR-L5-npy"/>
+                <constraint firstAttribute="trailing" secondItem="Jl1-bc-EuP" secondAttribute="trailing" constant="139" id="N1D-Z5-bne"/>
+                <constraint firstAttribute="trailing" secondItem="HDw-HW-gNz" secondAttribute="trailing" constant="20" id="RTa-du-JtY"/>
+                <constraint firstItem="Edi-YS-QvE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="46" id="Rf6-c6-1fi"/>
+                <constraint firstItem="HDw-HW-gNz" firstAttribute="top" secondItem="ymq-AI-hfw" secondAttribute="bottom" constant="8" id="T6y-lp-XCD"/>
+                <constraint firstAttribute="centerY" secondItem="IQX-Va-gcR" secondAttribute="centerY" constant="-22" id="aR3-l2-QvZ"/>
+                <constraint firstItem="Jnb-mk-zIb" firstAttribute="top" secondItem="6SQ-8G-OfM" secondAttribute="bottom" constant="8" id="bg1-wo-kFH"/>
+                <constraint firstAttribute="trailing" secondItem="Jnb-mk-zIb" secondAttribute="trailing" constant="20" id="bvv-S7-158"/>
+                <constraint firstItem="IQX-Va-gcR" firstAttribute="leading" secondItem="ntv-DU-TWX" secondAttribute="trailing" constant="-280" id="du5-5z-kFO"/>
+                <constraint firstItem="ntv-DU-TWX" firstAttribute="top" secondItem="IQX-Va-gcR" secondAttribute="bottom" constant="17" id="fMI-yO-YeZ"/>
+                <constraint firstItem="UpS-J4-z4p" firstAttribute="top" secondItem="IQX-Va-gcR" secondAttribute="bottom" constant="46" id="gQb-Dt-f7b"/>
+                <constraint firstItem="6SQ-8G-OfM" firstAttribute="top" secondItem="7UU-Lk-Lff" secondAttribute="bottom" constant="8" id="gZp-dc-4qD"/>
+                <constraint firstItem="arX-Cv-NqF" firstAttribute="top" secondItem="Jl1-bc-EuP" secondAttribute="bottom" constant="8" id="jaq-kj-STM"/>
+                <constraint firstAttribute="trailing" secondItem="ntv-DU-TWX" secondAttribute="trailing" constant="20" id="k4y-mt-vNS"/>
+                <constraint firstItem="UpS-J4-z4p" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="n5e-Qu-XoP"/>
+                <constraint firstItem="ntv-DU-TWX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="nI2-pT-hM8"/>
+                <constraint firstAttribute="bottom" secondItem="arX-Cv-NqF" secondAttribute="bottom" constant="20" id="npk-fM-NWL"/>
+                <constraint firstItem="Jnb-mk-zIb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="oge-PY-jWp"/>
+                <constraint firstItem="Edi-YS-QvE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="pjM-Ir-i2J"/>
+                <constraint firstItem="IQX-Va-gcR" firstAttribute="top" secondItem="Jnb-mk-zIb" secondAttribute="bottom" constant="8" id="q5c-f9-gdi"/>
+                <constraint firstItem="7UU-Lk-Lff" firstAttribute="top" secondItem="ymq-AI-hfw" secondAttribute="bottom" constant="8" id="wUd-Ix-LBe"/>
+                <constraint firstAttribute="trailing" secondItem="arX-Cv-NqF" secondAttribute="trailing" constant="20" id="xq3-xr-OOo"/>
+                <constraint firstItem="Jl1-bc-EuP" firstAttribute="top" secondItem="UpS-J4-z4p" secondAttribute="bottom" constant="8" id="y69-Tq-gri"/>
+                <constraint firstItem="Jl1-bc-EuP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="zVI-g5-AA7"/>
+                <constraint firstItem="ymq-AI-hfw" firstAttribute="top" secondItem="Edi-YS-QvE" secondAttribute="bottom" constant="8" id="zgX-7J-7zf"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

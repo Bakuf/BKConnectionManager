@@ -10,11 +10,6 @@ It has a little project to display how it works, it still need some work but for
 
 Enjoy =)
 
-Console Output
-----
-
-<p align="center" ><img src="https://raw.github.com/Bakuf/BKConnectionManager/master/console_output.png”></p>
-
 Author
 ----
 Rodrigo Gálvez
